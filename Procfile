@@ -1,0 +1,1 @@
+web: gunicorn talktomee.wsgi --log-file -

@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{% load staticfiles %}
+<div class="container">    
+        
+    <div id="loginbox" class = "mainbox row">
+        <div class = "col-md-6">
+        <img  src="{% static 'img/ttm.jpg' %}" style="padding-bottom:20px; padding-left:100px" height = "300 px", width = "400 px" /> 
+        </div>
+
+        <div class="panel panel-default col-md-6" >
+            <div class="panel-heading">
+                <div class="panel-title text-center">Register</div>
+            </div>     
+
+            <div class="panel-body" >
+
+                <form name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST">
+                    <!--{%csrf_token%}-->
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="first_name" type="text" class="form-control" name="first_name" value="" placeholder="First Name">                                        
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="last_name" type="text" class="form-control" name="last_name" value="" placeholder="Last Name">                                        
+                    </div>
+                    <br/>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input id="email" type="text" class="form-control" name="email" value="" placeholder="Email Id">                                        
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                        <input id="phone_number" type="text" class="form-control" name="phone_number" value="" placeholder="Phone Number">                 
+                    </div>
+                    <br />
+                    <div class="input-group"> 
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                    </div>                                                                  
+                    <br />
+                    <div class="form-group">
+                        <!-- Button -->
+                        <div class="col-sm-12 controls">
+                            <button type="submit" href="#" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-log-in"></i> Register</button>        
+                        </div>
+                    </div>
+                </form>     
+            </div>                     
+        </div>
+    </div>  
+</div>
+{% endblock %}
